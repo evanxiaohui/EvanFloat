@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EvanFloat.iml" filepath="$PROJECT_DIR$/EvanFloat.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evanphotolibrary/evanphotolibrary.iml" filepath="$PROJECT_DIR$/evanphotolibrary/evanphotolibrary.iml" />
     </modules>
   </component>
 </project>

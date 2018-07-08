@@ -11,19 +11,13 @@ import android.widget.Toast;
 import com.getbase.evanphoto.FloatingActionButton;
 import com.getbase.evanphoto.FloatingActionsMenu;
 
-public class MainActivity extends Activity {
+public class FloatActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+    setContentView(R.layout.float_act);
 
-    findViewById(R.id.pink_icon).setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Toast.makeText(MainActivity.this, "Clicked pink Floating Action Button", Toast.LENGTH_SHORT).show();
-      }
-    });
-
+    //左下按钮，动态改变属性
     FloatingActionButton button = (FloatingActionButton) findViewById(R.id.setter);
     button.setSize(FloatingActionButton.SIZE_MINI);
     button.setColorNormalResId(R.color.pink);
@@ -31,20 +25,20 @@ public class MainActivity extends Activity {
     button.setIcon(R.drawable.ic_fab_star);
     button.setStrokeVisible(false);
 
-    final View actionB = findViewById(R.id.action_b);
+    //给按钮动态设置样式
+    ShapeDrawable drawable = new ShapeDrawable(new OvalShape());
+    drawable.getPaint().setColor(getResources().getColor(R.color.white));
+    button.setIconDrawable(drawable);
 
-    FloatingActionButton actionC = new FloatingActionButton(getBaseContext());
-    actionC.setTitle("Hide/Show Action above");
-    actionC.setOnClickListener(new OnClickListener() {
+    //底部按钮
+    findViewById(R.id.pink_icon).setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
-        actionB.setVisibility(actionB.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+        Toast.makeText(FloatActivity.this, "我是五角星按钮哦", Toast.LENGTH_SHORT).show();
       }
     });
 
-    final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
-    menuMultipleActions.addButton(actionC);
-
+    //右上下拉
     final FloatingActionButton removeAction = (FloatingActionButton) findViewById(R.id.button_remove);
     removeAction.setOnClickListener(new OnClickListener() {
       @Override
@@ -53,38 +47,41 @@ public class MainActivity extends Activity {
       }
     });
 
-    ShapeDrawable drawable = new ShapeDrawable(new OvalShape());
-    drawable.getPaint().setColor(getResources().getColor(R.color.white));
-    ((FloatingActionButton) findViewById(R.id.setter_drawable)).setIconDrawable(drawable);
 
-    final FloatingActionButton actionA = (FloatingActionButton) findViewById(R.id.action_a);
-    actionA.setOnClickListener(new OnClickListener() {
+    //右下上拉
+    final View actionB = findViewById(R.id.action_b);
+    FloatingActionButton actionC = new FloatingActionButton(getBaseContext());
+    actionC.setTitle("隐藏第二项");
+    actionC.setOnClickListener(new OnClickListener() {
       @Override
-      public void onClick(View view) {
-        actionA.setTitle("Action A clicked");
+      public void onClick(View v) {
+        actionB.setVisibility(actionB.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
       }
     });
 
-    // Test that FAMs containing FABs with visibility GONE do not cause crashes
-    findViewById(R.id.button_gone).setVisibility(View.GONE);
+    final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
+      menuMultipleActions.addButton(actionC);
 
     final FloatingActionButton actionEnable = (FloatingActionButton) findViewById(R.id.action_enable);
     actionEnable.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View view) {
+        Toast.makeText(FloatActivity.this, "禁用右下角按钮", Toast.LENGTH_SHORT).show();
         menuMultipleActions.setEnabled(!menuMultipleActions.isEnabled());
       }
     });
 
+    //左边新增按钮
     FloatingActionsMenu rightLabels = (FloatingActionsMenu) findViewById(R.id.right_labels);
     FloatingActionButton addedOnce = new FloatingActionButton(this);
-    addedOnce.setTitle("Added once");
+    addedOnce.setTitle("新增的第一个按钮");
     rightLabels.addButton(addedOnce);
 
     FloatingActionButton addedTwice = new FloatingActionButton(this);
-    addedTwice.setTitle("Added twice");
+    addedTwice.setTitle("新增的第二个按钮");
     rightLabels.addButton(addedTwice);
     rightLabels.removeButton(addedTwice);
     rightLabels.addButton(addedTwice);
+
   }
 }

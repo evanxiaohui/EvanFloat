@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+  <!--  底部按钮-->
     <com.getbase.evanphoto.FloatingActionButton
         android:id="@+id/pink_icon"
         android:layout_width="wrap_content"
@@ -15,81 +16,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/pink_icon"
-        android:text="Text below button"
-        android:layout_centerHorizontal="true"
-        style="@style/menu_labels_style"
-        android:layout_marginBottom="48dp"/>
-
-    <com.getbase.evanphoto.AddFloatingActionButton
-        android:id="@+id/semi_transparent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/pink_icon"
-        fab:fab_plusIconColor="@color/white"
-        fab:fab_colorNormal="@color/blue_semi_transparent"
-        fab:fab_colorPressed="@color/blue_semi_transparent_pressed"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
-
     <com.getbase.evanphoto.FloatingActionButton
         android:id="@+id/setter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/semi_transparent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
-
-    <com.getbase.evanphoto.AddFloatingActionButton
-        android:id="@+id/normal_plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        fab:fab_plusIconColor="@color/half_black"
-        fab:fab_colorNormal="@color/white"
-        fab:fab_colorPressed="@color/white_pressed"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_below="@+id/multiple_actions_left" />
 
-    <com.getbase.evanphoto.FloatingActionsMenu
-        android:id="@+id/right_labels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@id/normal_plus"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        fab:fab_addButtonColorNormal="@color/white"
-        fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonPlusIconColor="@color/half_black"
-        fab:fab_addButtonSize="mini"
-        fab:fab_labelStyle="@style/menu_labels_style"
-        fab:fab_labelsPosition="right">
-
-        <com.getbase.evanphoto.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_title="Label on the right"
-            fab:fab_colorPressed="@color/white_pressed"/>
-
-        <com.getbase.evanphoto.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_size="mini"
-            fab:fab_title="Another one on the right"
-            fab:fab_colorPressed="@color/white_pressed"/>
-
-    </com.getbase.evanphoto.FloatingActionsMenu>
-
+    <!--右下上拉-->
     <com.getbase.evanphoto.FloatingActionsMenu
         android:id="@+id/multiple_actions"
         android:layout_width="wrap_content"
@@ -122,30 +57,30 @@
             fab:fab_colorPressed="@color/white_pressed"/>
 
     </com.getbase.evanphoto.FloatingActionsMenu>
-
+    <!--右上下拉-->
     <com.getbase.evanphoto.FloatingActionsMenu
         android:id="@+id/multiple_actions_down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="16dp"
         fab:fab_addButtonColorNormal="@color/white"
         fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonSize="mini"
         fab:fab_addButtonPlusIconColor="@color/half_black"
+        fab:fab_addButtonSize="mini"
         fab:fab_expandDirection="down"
-        fab:fab_labelStyle="@style/menu_labels_style"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp">
+        fab:fab_labelStyle="@style/menu_labels_style">
 
         <com.getbase.evanphoto.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_size="mini"/>
+            fab:fab_size="mini" />
 
         <com.getbase.evanphoto.FloatingActionButton
             android:id="@+id/button_remove"
@@ -153,54 +88,54 @@
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_title="Click to remove"/>
+            fab:fab_title="Click to remove" />
 
         <com.getbase.evanphoto.FloatingActionButton
             android:id="@+id/button_gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
-            fab:fab_colorPressed="@color/white_pressed"/>
+            fab:fab_colorPressed="@color/white_pressed" />
 
         <com.getbase.evanphoto.FloatingActionButton
             android:id="@+id/action_enable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
-            fab:fab_title="Set bottom menu enabled/disabled"
-            fab:fab_colorPressed="@color/white_pressed"/>
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Set bottom menu enabled/disabled" />
 
     </com.getbase.evanphoto.FloatingActionsMenu>
-
+    <!--右边左拉-->
     <com.getbase.evanphoto.FloatingActionsMenu
         android:id="@+id/multiple_actions_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/multiple_actions_down"
-        android:layout_toStartOf="@+id/multiple_actions_down"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/pink_icon"
+        android:layout_alignEnd="@+id/multiple_actions"
+        android:layout_alignRight="@+id/multiple_actions"
+        android:layout_marginBottom="162dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         fab:fab_addButtonColorNormal="@color/white"
         fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonSize="mini"
         fab:fab_addButtonPlusIconColor="@color/half_black"
+        fab:fab_addButtonSize="mini"
         fab:fab_addButtonStrokeVisible="false"
-        fab:fab_expandDirection="left"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp">
+        fab:fab_expandDirection="left">
 
         <com.getbase.evanphoto.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
-            fab:fab_colorPressed="@color/white_pressed"/>
+            fab:fab_colorPressed="@color/white_pressed" />
 
         <com.getbase.evanphoto.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_size="mini"/>
+            fab:fab_size="mini" />
 
         <com.getbase.evanphoto.FloatingActionButton
             android:layout_width="wrap_content"
@@ -208,14 +143,41 @@
             android:visibility="gone"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_size="mini"/>
+            fab:fab_size="mini" />
+
+    </com.getbase.evanphoto.FloatingActionsMenu>
+    <!--左边动态新增按钮-->
+    <com.getbase.evanphoto.FloatingActionsMenu
+        android:id="@+id/right_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/multiple_actions_left"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        fab:fab_addButtonColorNormal="@color/white"
+        fab:fab_addButtonColorPressed="@color/white_pressed"
+        fab:fab_addButtonPlusIconColor="@color/half_black"
+        fab:fab_addButtonSize="mini"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="right">
+
+        <com.getbase.evanphoto.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Label on the right" />
+
+        <com.getbase.evanphoto.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_size="mini"
+            fab:fab_title="Another one on the right" />
 
     </com.getbase.evanphoto.FloatingActionsMenu>
 
-    <com.getbase.evanphoto.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/setter_drawable"
-        android:layout_above="@id/setter"
-        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
