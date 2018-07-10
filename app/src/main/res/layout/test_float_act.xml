@@ -19,7 +19,8 @@
         fab:fab_addButtonColorPressed="@color/white_pressed"
         fab:fab_addButtonPlusIconColor="@color/half_black"
         fab:fab_addButtonSize="mini"
-        fab:fab_expandDirection="down">
+        fab:fab_expandDirection="down"
+        fab:fab_labelStyle="@style/menu_labels_style">
 
         <com.getbase.evanphoto.FloatingActionButton
             android:id="@+id/widget_map_image_check_box"
@@ -44,7 +45,8 @@
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_size="mini" />
+            fab:fab_size="mini"
+            fab:fab_title="Click to remove" />
 
         <com.getbase.evanphoto.FloatingActionButton
             android:id="@+id/widget_measure_polygon"
@@ -60,7 +62,6 @@
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_labelStyle="@style/menu_labels_style"
             fab:fab_icon="@drawable/i_query_normal"
             fab:fab_size="mini" />
 
