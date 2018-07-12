@@ -1,15 +1,15 @@
 <resources>
     <!--圆大小-->
-    <dimen name="fab_size_normal">60dp</dimen>
-    <dimen name="fab_size_mini">48dp</dimen>
+    <dimen name="fab_size_normal">55dp</dimen>
+    <dimen name="fab_size_mini">42dp</dimen>
     <!--图片大小-->
-    <dimen name="fab_icon_size">50dp</dimen>
+    <dimen name="fab_icon_size">43dp</dimen>
 
     <dimen name="fab_plus_icon_size">15dp</dimen>
     <dimen name="fab_plus_icon_stroke">3dp</dimen>
 
-    <dimen name="fab_shadow_offset">3dp</dimen>
-    <dimen name="fab_shadow_radius">5dp</dimen>
+    <dimen name="fab_shadow_offset">0dp</dimen>
+    <dimen name="fab_shadow_radius">0dp</dimen>
 
     <dimen name="fab_stroke_width">1dp</dimen>
 
